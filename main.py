@@ -34,6 +34,8 @@ def menus():
 
     if choose == 'login':
         
+        # Checking if Account already exists
+        
         if os.path.exists('Account_exists.txt'):
                 global Account_crated
                 Account_crated = True
@@ -61,6 +63,8 @@ def menus():
                 else:
                     print('Please check your username and password again.')
 
+             
+             # If it dosent exists making a new one
                 
             else:
                 first_username = input('Please choose your username : ')
@@ -70,6 +74,7 @@ def menus():
                 if generate_password == 'yes':
                       
                 # Password generation
+                
                     def generator():
                         try:
                             password_length = int(input('How many charactors would you like? : '))
@@ -116,7 +121,7 @@ def menus():
     
     elif choose == 'logout':
         while True:
-            if os.path.exists('Account_exists.txt'):
+            if os.path.exists('Account_exists.txt'): # Checking if Account is already logged out
                 with open('Account_password.txt', 'r') as verify_password:
                     verify_password = str(verify_password.read())
                 verify = pwinput.pwinput('Please enter your account password : ')
