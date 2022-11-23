@@ -1,3 +1,6 @@
+# This is the password generator I used on the main programme
+
+
 import random
 import string
 
