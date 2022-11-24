@@ -158,6 +158,7 @@ def menus():
                 menus()
     
     else:
+        print('Goodbye!')
         exit()
             
             
