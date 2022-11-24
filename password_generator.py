@@ -1,4 +1,4 @@
-# This is the password generator I used on the main programme
+# This is the password generator I used on the main programme.
 
 
 import random
@@ -20,12 +20,12 @@ def generator():
             password = "".join(random.sample(new_charactors, password_length))
         else:
             password = "".join(random.sample(charactors, password_length))
-    except ValueError:
-            print('Please enter only integer values please!')
-            generator()
-    except Exception as e:
+    except ValueError:        
+        print('Please enter only integer values please!')
+        generator()
+    except Exception as error:
         print('Something went wrong :(')
-        print(e)
+        print(error)
     else:
         print(f'Your generated password is {password}')
         differnt_password = input('Do you want to generate a different password? (Yes/No) : ').lower()
