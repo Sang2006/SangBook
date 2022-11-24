@@ -110,7 +110,7 @@ def menus():
                 
                 
                 else:
-                    first_password = pwinput.pwinput('Please choose your passwor : ')
+                    first_password = pwinput.pwinput('Please choose your password : ')
                     with open('Account_password.txt', 'w') as password: 
                         password.write(str(first_password))
                     with open('Account_exists.txt', 'w') as exists:
