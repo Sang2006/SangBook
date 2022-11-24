@@ -1,5 +1,5 @@
 # This is the password generator I used on the main programme.
-
+#password strength
 
 import random
 import string
