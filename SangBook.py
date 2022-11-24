@@ -86,9 +86,9 @@ def menus():
                         except ValueError:
                                 print('Please enter only integer values please!')
                                 generator()
-                        except Exception as e:
+                        except Exception as error:
                             print('Something went wrong :(')
-                            print(e)
+                            print(error)
                         else:
                             print(f'Your generated password is {password}')
                             differnt_password = input('Do you want to generate a different password? (Yes/No) : ').lower()
