@@ -12,12 +12,12 @@ logged_in = False
 
 Account_crated = False
 
-def menu_display():
+def menu_display(): # This is for displaying the menu
     for x in menu:
         print(x)
         
 
-charactors = string.ascii_letters + string.digits + string.punctuation + " "
+charactors = string.ascii_letters + string.digits + string.punctuation + " " # These are the characters for the password generator
 
 global password
 
@@ -47,7 +47,7 @@ def menus():
             with open('Account_username.txt', 'r') as username:
                 username = str(username.read())
         
-
+        # When the account already exists
 
         while True:
             if Account_crated == True:
@@ -64,7 +64,7 @@ def menus():
                     print('Please check your username and password again.')
 
              
-             # If it dosent exists making a new one
+        # If it dosent exists making a new one
                 
             else:
                 first_username = input('Please choose your username : ')
@@ -106,7 +106,7 @@ def menus():
                                 menus()
                     generator()
                     
-                # user input password
+                # User input password
                 
                 
                 else:
@@ -125,12 +125,9 @@ def menus():
                 with open('Account_password.txt', 'r') as verify_password:
                     verify_password = str(verify_password.read())
                 verify = pwinput.pwinput('Please enter your account password : ')
-
-                
-                
+                                         
                 if verify == verify_password:
-                    confirm = input('Are you sure you want to Logout? (Yes/No) : ').lower()
-                    
+                    confirm = input('Are you sure you want to Logout? (Yes/No) : ').lower()  
                     
                     if confirm == 'yes':
                         while True:
