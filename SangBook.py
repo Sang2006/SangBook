@@ -4,8 +4,8 @@ import random
 import string
 
 
-menu = ['Login', 'Logout', 'Exit']
-
+menu = ['Login', 'Logout', 'Exit']  
+    
 logged_in = False
 
 
@@ -15,6 +15,7 @@ Account_crated = False
 def menu_display(): # This is for displaying the menu
     for x in menu:
         print(x)
+    print()
         
 
 charactors = string.ascii_letters + string.digits + string.punctuation + " " # These are the characters for the password generator
@@ -24,6 +25,7 @@ global password
 
 
 print('Welcome to SangBook')
+print()
 
 def menus():
     
@@ -103,6 +105,7 @@ def menus():
                                 with open('Account_exists.txt', 'w') as exists:
                                     exists.write(str('Account does exist'))
                                 print('Ok! You have successfully created your account!')
+                                print()
                                 menus()
                     generator()
                     
@@ -143,8 +146,12 @@ def menus():
                                 print('You have successfully logged out!')
                                 menus()
                                 break
+                            else:
+                                print('Confirmation failed!')
+                                print("You won't be logged out!")
+                                menus()
                     else:
-                        print("Ok! You won't be logged off!")
+                        print("Ok! You won't be logged out!")
                         menus()
                 
                 

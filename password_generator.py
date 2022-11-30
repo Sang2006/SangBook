@@ -16,7 +16,7 @@ def generator():
     try:
         password_length = int(input('How many charactors would you like? : '))
         if password_length > len(charactors):
-            new_charactors = password_length*charactors
+            new_charactors = password_length * charactors # This is for new characters if there are no characters left
             password = "".join(random.sample(new_charactors, password_length))
         else:
             password = "".join(random.sample(charactors, password_length))
@@ -34,8 +34,7 @@ def generator():
         else:
             print(f'Ok, Your password is : {password}')
             saved_password = password
-
-generator()
+            
 
 
     
